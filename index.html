@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="head">Smoki's Weather app</h1>
+      <div class="searchBox">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Enter a city"
+          spellcheck="false"
+        />
+      </div>
+      <h1 class="cityName">City: <span>${data.name}</span></h1>
+      <h2 class="weather">
+        Weather: <span>${data.weather[0].description}</span>
+      </h2>
+      <h2 class="temp">
+        Temperature: <span>${Math.Round(data.main.temp)}</span>
+      </h2>
+      <h2 class="feelingTemp">
+        Outside temperature feeling like:
+        <span>${Math.Round(data.main.feels_like)}</span>
+      </h2>
+      <h2 class="humidity">Humidity: <span>${data.main.humidity}</span></h2>
+      <h2 class="country">Country: <span>${data.sys.country}</span></h2>
+      <h2 class="windSpeed">Wind speed: <span>${data.wind.speed}</span></h2>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
